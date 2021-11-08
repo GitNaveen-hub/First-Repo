@@ -18,7 +18,7 @@ pipeline {
         
             }
         }
-        stages("Deploy_Dev"){
+      stages("Deploy_Dev"){
             ssh """
                 cp -rf target/myweb.war /opt/apache-tomcat-8.5.72/webapps/
                 shh /opt/apache-tomcat-8.5.72/bin/shutdown.sh
