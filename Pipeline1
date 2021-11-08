@@ -14,8 +14,16 @@ pipeline {
         stage("Maven build"){
             steps{
                 sh "mvn clean package"
+                sh "mv target/*war target/myweb.war" 
         
             }
+        }
+        stage("Dev Deploy"){
+            ssh """
+                cp -rf target/myweb.war /opt/apache-tomcat-8.5.72/webapps/
+                sh  /opt/apache-tomcat-8.5.72/bin/shutdown.sh
+                sh  /opt/apache-tomcat-8.5.72/bin/startup.sh
+                """
         }
     }
 }
