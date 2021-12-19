@@ -1,3 +1,4 @@
 Welcome to git
 pull the changes from remote to local repo
 added the naveen remote url
+checking the fetch command deatils
