@@ -3,3 +3,4 @@ pull the changes from remote to local repo
 added the naveen remote url
 checking the fetch command deatils
 learning the git branch
+pushing the code from local to reomte with task-2 branch
